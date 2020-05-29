@@ -27,6 +27,10 @@ public class HeroController {
 		 dao.findAll().forEach(a->result.add(a));
 		 return result;
 	}
+	@GetMapping("/")
+	public String getHeroesh(){
+		 return "hola mundo";
+	}
 	
 	@GetMapping("/select/{id}")
 	public Hero getHeroeById(@PathVariable Long id){
